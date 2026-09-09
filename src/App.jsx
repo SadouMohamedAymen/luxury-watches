@@ -1,13 +1,16 @@
 import { Toaster } from "@/components/ui/toaster";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+
 import PageNotFound from "./lib/PageNotFound";
 import { AuthProvider, useAuth } from "@/lib/AuthContext";
 import ScrollToTop from "./components/ScrollToTop";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import Layout from "@/components/Layout";
+
 import Home from "@/pages/Home";
 import Collection from "@/pages/Collection";
 import ProductDetails from "@/pages/ProductDetails";
+
 import Login from "@/pages/Login";
 import Register from "@/pages/Register";
 import ForgotPassword from "@/pages/ForgotPassword";
@@ -58,7 +61,7 @@ const AuthenticatedApp = () => {
 function App() {
   return (
     <AuthProvider>
-      <Router>
+      <Router basename="/luxury-watches">
         <ScrollToTop />
         <AuthenticatedApp />
         <Toaster />
