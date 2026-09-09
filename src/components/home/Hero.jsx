@@ -90,7 +90,7 @@ export default function Hero() {
       <div className="sticky top-0 h-screen w-full overflow-hidden">
         <motion.div
           style={{ scale }}
-          className="absolute inset-x-0 top-[70px] bottom-0"
+          className="absolute inset-x-0 top-0 bottom-0"
         >
           <video
             ref={videoRef}
